@@ -1,0 +1,57 @@
+# Maven build output
+/target/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# STS / Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Windows hidden files
+ehthumbs.db
+Desktop.ini
+
+# Application-specific
+*.env
+*.local
+*.swp
+
+# Ignore wrapper logs and binaries if not needed
+.mvn/
+mvnw
+mvnw.cmd
+
+# VS Code (if used)
+.vscode/
+
+# Node modules (if frontend exists)
+node_modules/
+
+# Ignore any temporary or lock files
+*.tmp
+*.bak
+*.lock
+
+# Ignore test reports
+/test-output/
+build/
+
+# Ignore STS-specific EBWebView crash/log data
+**/EBWebView/
+
+# Ignore Gradle cache (if present)
+.gradle/
+build/

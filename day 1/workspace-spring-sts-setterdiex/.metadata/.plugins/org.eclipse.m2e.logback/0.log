@@ -1,0 +1,62 @@
+2025-07-02 15:57:18,891 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2025-07-02 16:29:42,272 [Worker-6: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:setterdi:0.0.1-SNAPSHOT @ D:\workspaces\workspace-spring-sts-new\SetterDIExample\pom.xml.
+2025-07-02 16:29:43,236 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SetterDIExample/src/main/java
+2025-07-02 16:29:43,237 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SetterDIExample/src/main/resources
+2025-07-02 16:29:43,245 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SetterDIExample/src/main/resources
+2025-07-02 16:29:43,253 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SetterDIExample/src/test/java
+2025-07-02 16:29:43,254 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SetterDIExample/src/test/resources
+2025-07-02 16:29:43,860 [Worker-6: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2025-07-02 16:29:43,861 [Worker-6: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-07-02 16:29:44,075 [Worker-6: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:setterdi:0.0.1-SNAPSHOT @ D:\workspaces\workspace-spring-sts-new\SetterDIExample\pom.xml.
+2025-07-02 16:29:44,310 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SetterDIExample/src/main/java
+2025-07-02 16:29:44,310 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SetterDIExample/src/main/resources
+2025-07-02 16:29:44,311 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SetterDIExample/src/main/resources
+2025-07-02 16:29:44,311 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SetterDIExample/src/test/java
+2025-07-02 16:29:44,311 [Worker-6: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SetterDIExample/src/test/resources
+2025-07-02 16:29:44,552 [Worker-6: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2025-07-02 16:29:45,319 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-02 16:29:45,387 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-02 16:29:45,392 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\workspaces\workspace-spring-sts-new\SetterDIExample\src\test\resources
+2025-07-02 16:31:00,085 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-02 16:31:00,097 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-02 16:31:00,109 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\workspaces\workspace-spring-sts-new\SetterDIExample\src\test\resources
+2025-07-02 16:32:58,640 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-02 16:32:58,644 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-02 16:32:58,654 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\workspaces\workspace-spring-sts-new\SetterDIExample\src\test\resources
+2025-07-02 16:34:56,169 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-02 16:34:56,175 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-02 16:34:56,180 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\workspaces\workspace-spring-sts-new\SetterDIExample\src\test\resources
+2025-07-02 16:58:02,019 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-02 16:58:02,026 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-02 16:58:02,033 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\workspaces\workspace-spring-sts-new\SetterDIExample\src\test\resources
+2025-07-03 14:09:32,115 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-07-03 14:20:55,794 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-aop-demo:0.0.1-SNAPSHOT @ D:\stsfile\spring-aop-demo\pom.xml.
+2025-07-03 14:20:56,292 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.5.0/spring-boot-starter-aop-3.5.0.pom
+2025-07-03 14:20:56,339 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.5.0/spring-boot-starter-aop-3.5.0.pom
+2025-07-03 14:20:56,388 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.pom
+2025-07-03 14:20:56,423 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.pom
+2025-07-03 14:20:56,597 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.5.0/spring-boot-starter-aop-3.5.0.jar
+2025-07-03 14:20:56,717 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.5.0/spring-boot-starter-aop-3.5.0.jar
+2025-07-03 14:20:56,741 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar
+2025-07-03 14:20:58,130 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar
+2025-07-03 14:20:59,186 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-aop-demo/src/main/java
+2025-07-03 14:20:59,189 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-aop-demo/src/main/resources
+2025-07-03 14:20:59,189 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-aop-demo/src/main/resources
+2025-07-03 14:20:59,190 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-aop-demo/src/test/java
+2025-07-03 14:20:59,191 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-aop-demo/src/test/resources
+2025-07-03 14:20:59,368 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 6 sec
+2025-07-03 14:20:59,463 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.5.0/spring-boot-starter-aop-3.5.0-sources.jar
+2025-07-03 14:20:59,469 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.5.0/spring-boot-starter-aop-3.5.0-sources.jar
+2025-07-03 14:20:59,472 [Worker-8: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-aop:3.5.0
+2025-07-03 14:20:59,562 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24-sources.jar
+2025-07-03 14:20:59,773 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-03 14:20:59,784 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-03 14:20:59,788 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\stsfile\spring-aop-demo\src\test\resources
+2025-07-03 14:21:00,592 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24-sources.jar
+2025-07-03 14:21:00,628 [Worker-8: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.aspectj:aspectjweaver:1.9.24
+2025-07-03 14:21:29,373 [Worker-8: Launching spring-aop-demo - DemoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-03 14:21:29,381 [Worker-8: Launching spring-aop-demo - DemoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-03 14:21:29,384 [Worker-8: Launching spring-aop-demo - DemoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\stsfile\spring-aop-demo\src\test\resources
+2025-07-03 15:10:43,434 [Worker-6: Launching spring-aop-demo - DemoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-03 15:10:43,504 [Worker-6: Launching spring-aop-demo - DemoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-03 15:10:43,508 [Worker-6: Launching spring-aop-demo - DemoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\stsfile\spring-aop-demo\src\test\resources

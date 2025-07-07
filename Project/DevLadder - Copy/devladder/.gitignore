@@ -1,0 +1,76 @@
+# -------------------------
+# OS-specific
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Java
+# -------------------------
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# -------------------------
+# Maven
+# -------------------------
+/target/
+
+# -------------------------
+# Gradle (if applicable)
+# -------------------------
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# -------------------------
+# Spring Boot
+# -------------------------
+/logs/
+*.pid
+
+# -------------------------
+# IntelliJ IDEA
+# -------------------------
+.idea/
+*.iml
+*.iws
+out/
+
+# -------------------------
+# Eclipse
+# -------------------------
+.project
+.classpath
+.settings/
+bin/
+
+# -------------------------
+# VS Code
+# -------------------------
+.vscode/
+
+# -------------------------
+# Environment and secrets
+# -------------------------
+.env
+application-dev.yml
+application-prod.yml
+application-secrets.yml
+application.properties.local
+
+# -------------------------
+# Node (if you have front-end)
+# -------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+
+# -------------------------
+# Others
+# -------------------------
+*.tmp
+*.swp

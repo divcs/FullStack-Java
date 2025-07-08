@@ -53,15 +53,9 @@ public class PostController {
         return postRepo.findAll();
     }
 
-//    // 🔹 View a single post by ID
-//    @GetMapping("/posts/{postId}")
-//    public Post getPostById(@PathVariable String postId) {
-//        return postRepo.findById(postId)
-//                .orElseThrow(() -> new RuntimeException("Post not found"));
-//    }
     @GetMapping("/posts/{postId}")
     public Post getPostById(@PathVariable String postId) {
-        System.out.println("Searching for post ID: " + postId);
+//        System.out.println("Searching for post ID: " + postId);
 
         return postRepo.findById(postId)
             .orElseThrow(() -> new RuntimeException("Post not found"));

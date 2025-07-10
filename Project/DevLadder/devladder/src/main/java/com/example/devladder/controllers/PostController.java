@@ -1,18 +1,19 @@
 package com.example.devladder.controllers;
 
 import com.example.devladder.models.Comment;
-import com.example.devladder.models.User;
 import com.example.devladder.models.Post;
+import com.example.devladder.models.User;
 import com.example.devladder.repositories.PostRepository;
 import com.example.devladder.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.*;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class PostController {
 
@@ -22,79 +23,122 @@ public class PostController {
     @Autowired
     private UserRepository userRepo;
 
- // 🔹 Create a post for a user
+    // 🔹 Create a post for a user
     @PostMapping("/users/{userId}/posts")
     public Post createPostForUser(@PathVariable String userId, @RequestBody Post post) {
         User user = userRepo.findById(userId)
             .orElseThrow(() -> new RuntimeException("User not found"));
 
         post.setUserId(user.getId());
-        post.setUsername(user.getName());  // ✅ Use getName() instead // ✅ Set the username
+        post.setUsername(user.getName());
         post.setTimestamp(LocalDateTime.now());
 
         return postRepo.save(post);
     }
 
-    @GetMapping("/test")
-    public String testRoute() {
-        return "PostController is working!";
-    }
-
-
-    // 🔹 Get all posts for a user
+    // 🔹 Get all posts by user
     @GetMapping("/users/{userId}/posts")
     public List<Post> getPostsByUser(@PathVariable String userId) {
         return postRepo.findByUserId(userId);
     }
 
-    // 🔹 Global feed (optional)
+    // 🔹 Global feed
     @GetMapping("/posts")
     public List<Post> getAllPosts() {
         return postRepo.findAll();
     }
 
+    // 🔹 Get post by ID
     @GetMapping("/posts/{postId}")
     public Post getPostById(@PathVariable String postId) {
-//        System.out.println("Searching for post ID: " + postId);
-
         return postRepo.findById(postId)
             .orElseThrow(() -> new RuntimeException("Post not found"));
     }
 
- // 🔹 Add top-level comment to post 
+    // ✅ Update post
+    @PutMapping("/posts/{postId}")
+    public ResponseEntity<Post> updatePost(@PathVariable String postId, @RequestBody Post updatedPost) {
+        return postRepo.findById(postId)
+            .map(post -> {
+                post.setContent(updatedPost.getContent());
+                post.setTags(updatedPost.getTags());
+                return ResponseEntity.ok(postRepo.save(post));
+            })
+            .orElse(ResponseEntity.notFound().build());
+    }
+
+    // ✅ Delete post
+    @DeleteMapping("/posts/{postId}")
+    public ResponseEntity<String> deletePost(@PathVariable String postId) {
+        if (postRepo.existsById(postId)) {
+            postRepo.deleteById(postId);
+            return ResponseEntity.ok("Post deleted successfully.");
+        } else {
+            return ResponseEntity.status(404).body("Post not found.");
+        }
+    }
+
     @PostMapping("/posts/{postId}/comments")
     public Post addComment(@PathVariable String postId, @RequestBody Comment comment) {
-        // ✅ Step 1: Fetch post
         Post post = postRepo.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found"));
 
-        // ✅ Step 2: Fetch user to get commenter name
-        User user = userRepo.findById(comment.getCommenterId())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        System.out.println("🔹 Post found with ID: " + postId);
+        System.out.println("🔸 Incoming commenterId: " + comment.getCommenterId());
 
-        // ✅ Step 3: Set commenterName using the user
-        System.out.println("Comment class: " + comment.getClass().getName());
-        comment.setCommenterName(user.getName());  // or user.getUsername() if that field exists
-       
+        // DEBUG: Try fetching user directly
+        Optional<User> userOpt = userRepo.findById(comment.getCommenterId());
+        if (userOpt.isEmpty()) {
+            System.out.println("❌ No user found with ID: " + comment.getCommenterId());
+            throw new RuntimeException("User not found");
+        }
 
-        // ✅ Step 4: Initialize comments list if null
+        User user = userOpt.get();
+        System.out.println("✅ User found: " + user.getName());
+
+        comment.setCommenterName(user.getName());
+
         if (post.getComments() == null) {
             post.setComments(new ArrayList<>());
         }
 
-        // ✅ Step 5: Add comment to post
         post.getComments().add(comment);
-
-        // ✅ Step 6: Save post with the new comment
         return postRepo.save(post);
     }
 
-    // 🔹 Add a reply to a comment
-    @PostMapping("/posts/{postId}/comments/{parentCommentId}/reply")
-    public Post addReply(@PathVariable String postId,
-                         @PathVariable String parentCommentId,
-                         @RequestBody Comment reply) {
 
+    // ✅ Update a comment (top-level only)
+    @PutMapping("/posts/{postId}/comments/{commentId}")
+    public ResponseEntity<Post> updateComment(@PathVariable String postId, @PathVariable String commentId, @RequestBody Comment updatedComment) {
+        Post post = postRepo.findById(postId).orElse(null);
+        if (post == null) return ResponseEntity.notFound().build();
+
+        boolean updated = false;
+        for (Comment comment : post.getComments()) {
+            if (comment.getId().equals(commentId)) {
+                comment.setText(updatedComment.getText());
+                updated = true;
+                break;
+            }
+        }
+
+        return updated ? ResponseEntity.ok(postRepo.save(post)) : ResponseEntity.notFound().build();
+    }
+
+    // ✅ Delete a comment (top-level only)
+    @DeleteMapping("/posts/{postId}/comments/{commentId}")
+    public ResponseEntity<Post> deleteComment(@PathVariable String postId, @PathVariable String commentId) {
+        Post post = postRepo.findById(postId).orElse(null);
+        if (post == null) return ResponseEntity.notFound().build();
+
+        boolean removed = post.getComments().removeIf(comment -> comment.getId().equals(commentId));
+
+        return removed ? ResponseEntity.ok(postRepo.save(post)) : ResponseEntity.notFound().build();
+    }
+
+    // 🔹 Add reply to a comment
+    @PostMapping("/posts/{postId}/comments/{parentCommentId}/reply")
+    public Post addReply(@PathVariable String postId, @PathVariable String parentCommentId, @RequestBody Comment reply) {
         Post post = postRepo.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found"));
 
@@ -106,7 +150,7 @@ public class PostController {
         return postRepo.save(post);
     }
 
-    // Recursive function to find and reply to a comment
+    // Recursively find comment and add reply
     private boolean addReplyRecursive(List<Comment> comments, String parentId, Comment reply) {
         if (comments == null) return false;
 
@@ -118,7 +162,6 @@ public class PostController {
                 c.getReplies().add(reply);
                 return true;
             }
-            // Recurse deeper
             if (addReplyRecursive(c.getReplies(), parentId, reply)) {
                 return true;
             }
